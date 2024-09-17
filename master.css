@@ -1,0 +1,232 @@
+* {
+  box-sizing: border-box;
+<<<<<<< HEAD
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  --backcolor: #f2edda;
+  --boardcolor: #a38d64;
+  --cellcolor: #faf5e2;
+  --fontcolor1: #7a5f32;
+  --fontcolor1: #4f8b89;
+  --similarcolor: #c0dfcf;
+  --similarcolor1: #ede6cd;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-color: var(--backcolor);
+  margin-top: 20px;
+}
+body .board {
+  color: var(--boardcolor);
+  width: 400px;
+  height: 400px;
+  display: grid;
+  border: 3px solid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+body .board .insame {
+  background-color: var(--similarcolor1);
+}
+body .board > div:not(:nth-child(3), :nth-child(6), :nth-child(9)) {
+  border-right: 3px solid;
+}
+body .board > div:not(:nth-of-type(7), :nth-of-type(8), :nth-of-type(9)) {
+  border-bottom: 3px solid;
+}
+body .board > div {
+  background-color: var(--cellcolor);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+body .board > div > div:not(:nth-child(3), :nth-child(6), :nth-child(9)) {
+  border-right: 1px solid;
+}
+body .board > div > div:not(:nth-of-type(7), :nth-of-type(8), :nth-of-type(9)) {
+  border-bottom: 1px solid;
+}
+body .board > div .like {
+  background-color: var(--similarcolor);
+}
+body .board > div > div {
+  cursor: pointer;
+=======
+  margin: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+>>>>>>> 6e2834fd0761a7b2877d7857903ef1c57314255a
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .board > div > div > p {
+  font-size: 24px;
+  font-weight: 600;
+  color: #785e30;
+}
+body .board > div > div .answer {
+  color: #4e8a85 !important;
+}
+body .board > div > div .WrongAnswer {
+  color: #ff0000;
+}
+body .board > div > div > div {
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: space-between;
+  -moz-column-gap: 6px;
+       column-gap: 6px;
+}
+body .board > div > div > div > p {
+  font-size: 10px;
+  font-weight: 600;
+}
+body .board > div > div .note {
+  display: grid;
+}
+body .ifpenclk {
+  color: #785e30 !important;
+}
+body .num {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: #4e8a85;
+}
+body .num > div {
+  display: flex;
+  flex-direction: column;
+<<<<<<< HEAD
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 60px;
+  border-radius: 2px;
+  background-color: #faf5e2;
+  cursor: pointer;
+  opacity: 0.3;
+  padding: 0px;
+=======
+  row-gap: 10px;
+  height: 100vh;
+  margin: 0px;
+}
+body > .num form input[type=radio] {
+  display: none;
+}
+body > .num div {
+  font-size: 20px;
+  padding: 2px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+  background-color: aliceblue;
+  border: 2px solid;
+}
+body > .board {
+  max-height: 500px;
+  min-width: 300px;
+  min-height: 300px;
+  max-width: 500px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  border: 2px solid;
+}
+body > .board > div:not(:last-child) {
+  border-bottom: 2px solid black;
+}
+body > .board > div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+body > .board > div > div:not(:last-child) {
+  border-right: 2px solid black;
+}
+body > .board > div > div {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+body > .board > div > div > div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+body > .board > div > div > div > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+body > .board > div > div > div > div div {
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  text-align: center;
+  color: #555;
+  height: 100%;
+  width: 100%;
+}
+body > .board > div > div > div > div div > p {
+  font-size: 7px;
+  font-weight: 500;
+  margin: 0;
+>>>>>>> 6e2834fd0761a7b2877d7857903ef1c57314255a
+}
+body .num > div span {
+  font-size: 14px;
+  color: #785e30;
+}
+body .num .clk {
+  opacity: 1;
+  box-shadow: -1px 3px 5px 0px #785e30;
+  transform: scale(1.1);
+}
+body .opr {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 40px;
+  margin: 10px 0px 0px;
+  text-align: center;
+}
+body .opr > div {
+  cursor: pointer;
+  color: #785e30;
+  font-size: 20px;
+}
+body .opr > div i {
+  padding-bottom: 12px;
+}
+body .opr > div > p {
+  margin: -5px;
+  font-weight: 500;
+}
+body .opr .undo span {
+  padding-bottom: 12px;
+  font-size: 28px;
+}
+body .opr .undo > p {
+  margin-top: -9px;
+}
+body .opr .penon {
+  color: #4e8a85;
+}/*# sourceMappingURL=master.css.map */
